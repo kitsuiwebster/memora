@@ -39,7 +39,7 @@ CHEERS TO YOU, THE SULTAN OF SMARTS, THE RULER OF RIGHT ANSWERS! THIS IS YOUR DA
 streak_of_150 = "CONGRATULATIONS ON HAVING 150 CORRECT ANSWERS IN A ROW, LET'S GOOOO!"
 streak_of_200 = "CONGRATS !!! YOU GOT 200 CORRECT ANSWERS IN A ROW, AAAAAAIGHT, YOU ROOOOOOCK!"
 
-print(Fore.CYAN + """ 
+print(""" 
 
  d888    .d8888b.   .d8888b.  
 d8888   d88P  Y88b d88P  Y88b 
@@ -52,7 +52,7 @@ d8888   d88P  Y88b d88P  Y88b
 
 """)
 
-print("Welcome to the Centium Learner !" + Fore.RESET)
+print(Fore.YELLOW + "Welcome to the Centium Learner !" + Fore.RESET)
 # Game loop
 while True:
     # Choose a random number.
@@ -102,8 +102,8 @@ while True:
 |   ||  ||  |_|  ||  |_|  || |_|   ||  _   | |_     _||    ___|
 |   |_| ||       ||       ||       || |_|   |  |   |  |   |___ 
 |_______||_______||_______||______| |_______|  |___|  |_______|
-And cy@ soon :D 
-            """)
+""")
+            print(Fore.YELLOW + "And cy@ soon :D")
             break
         else:
             score = 0  # Reset the score
