@@ -85,7 +85,16 @@ while True:
         retry = input().lower()
         if retry == "q":
             print(Fore.YELLOW + f"Your best score in this session is: {best_score}" + Fore.RESET)
-            print("Goodbye and cy@ soon!")
+            print("""
+ _______  _______  _______  ______   _______  __   __  _______ 
+|       ||       ||       ||      | |  _    ||  | |  ||       |
+|    ___||   _   ||   _   ||  _    || |_|   ||  |_|  ||    ___|
+|   | __ |  | |  ||  | |  || | |   ||       ||       ||   |___ 
+|   ||  ||  |_|  ||  |_|  || |_|   ||  _   | |_     _||    ___|
+|   |_| ||       ||       ||       || |_|   |  |   |  |   |___ 
+|_______||_______||_______||______| |_______|  |___|  |_______|
+And cy@ soon :D 
+            """)
             break
         else:
             score = 0  # Reset the score
