@@ -1,3 +1,6 @@
+# @name: Cawdrey
+# @author: kitsuiwebster
+
 import random
 import json
 from colorama import init, Fore
