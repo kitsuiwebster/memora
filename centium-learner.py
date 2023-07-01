@@ -36,7 +36,14 @@ CHEERS TO YOU, THE SULTAN OF SMARTS, THE RULER OF RIGHT ANSWERS! THIS IS YOUR DA
 streak_of_150 =  "CONGRATULATIOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOONS, OH DEFENDER OF DEDUCTIONS! YOU'VE HIT THE JACKPOT OF JUDGEMENTS WITH A FLAWLESS 150-CORRECT-ANSWERS-IN-A-ROW STREAK! DAAAAAAAAAAAAAMN BRO YOU ROCK!"
 streak_of_200 = "YOU GOT 200 CORRECT ANSWERS IN A FUCKING ROW, YOU FUCKING ROCK MOTHERFUCKER!"
 
-
+print("""
+  ____           _   _                   _                                    
+ / ___|___ _ __ | |_(_)_   _ _ __ ___   | |    ___  __ _ _ __ _ __   ___ _ __ 
+| |   / _ \ '_ \| __| | | | | '_ ` _ \  | |   / _ \/ _` | '__| '_ \ / _ \ '__|
+| |__|  __/ | | | |_| | |_| | | | | | | | |__|  __/ (_| | |  | | | |  __/ |   
+ \____\___|_| |_|\__|_|\__,_|_| |_| |_| |_____\___|\__,_|_|  |_| |_|\___|_|   
+                                                                              
+""")
 # Game loop
 while True:
     # Choose a random number.
