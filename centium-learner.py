@@ -39,8 +39,8 @@ CHEERS TO YOU, THE SULTAN OF SMARTS, THE RULER OF RIGHT ANSWERS! THIS IS YOUR DA
 streak_of_150 = "CONGRATULATIONS ON HAVING 150 CORRECT ANSWERS IN A ROW, LET'S GOOOO!"
 streak_of_200 = "CONGRATS !!! YOU GOT 200 CORRECT ANSWERS IN A ROW, AAAAAAIGHT, YOU ROOOOOOCK!"
 
-print(""" 
-                                                                                                                                                 
+print(Fore.CYAN + """ 
+
  d888    .d8888b.   .d8888b.  
 d8888   d88P  Y88b d88P  Y88b 
   888   888    888 888    888 
@@ -50,8 +50,9 @@ d8888   d88P  Y88b d88P  Y88b
   888   Y88b  d88P Y88b  d88P 
 8888888  "Y8888P"   "Y8888P"  
 
-Welcome to the Centium Learner !                                                                   
 """)
+
+print("Welcome to the Centium Learner !" + Fore.RESET)
 # Game loop
 while True:
     # Choose a random number.
