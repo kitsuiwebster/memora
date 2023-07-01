@@ -39,13 +39,15 @@ CHEERS TO YOU, THE SULTAN OF SMARTS, THE RULER OF RIGHT ANSWERS! THIS IS YOUR DA
 streak_of_150 = "CONGRATULATIONS ON HAVING 150 CORRECT ANSWERS IN A ROW, LET'S GOOOO!"
 streak_of_200 = "CONGRATS !!! YOU GOT 200 CORRECT ANSWERS IN A ROW, AAAAAAIGHT, YOU ROOOOOOCK!"
 
-print("""
-  ____           _   _                   _                                    
- / ___|___ _ __ | |_(_)_   _ _ __ ___   | |    ___  __ _ _ __ _ __   ___ _ __ 
-| |   / _ \ '_ \| __| | | | | '_ ` _ \  | |   / _ \/ _` | '__| '_ \ / _ \ '__|
-| |__|  __/ | | | |_| | |_| | | | | | | | |__|  __/ (_| | |  | | | |  __/ |   
- \____\___|_| |_|\__|_|\__,_|_| |_| |_| |_____\___|\__,_|_|  |_| |_|\___|_|   
-                                                                              
+print("""                                                                                                                                                  
+                                           ,,                                                                                                         
+  .g8---bgd                        mm      db                                    `7MMF'                                                               
+.dP'     `M                        MM                                              MM                                                                 
+dM'       `  .gP"Ya  `7MMpMMMb.  mmMMmm  `7MM  `7MM  `7MM  `7MMpMMMb.pMMMb.        MM         .gP"Ya   ,6"Yb.  `7Mb,od8 `7MMpMMMb.   .gP"Ya  `7Mb,od8 
+MM          ,M'   Yb   MM    MM    MM      MM    MM    MM    MM    MM    MM        MM        ,M'   Yb 8)   MM    MM' "'   MM    MM  ,M'   Yb   MM' "' 
+MM.         8M*****b   MM    MM    MM      MM    MM    MM    MM    MM    MM        MM      , 8M*****b  ,pm9MM    MM       MM    MM  8M*****b   MM     
+`Mb.     ,' YM.    ,   MM    MM    MM      MM    MM    MM    MM    MM    MM        MM     ,M YM.    , 8M   MM    MM       MM    MM  YM.    ,   MM     
+  ` bmmmd'   `Mbmmd' .JMML  JMML.  `Mbmo .JMML.  `Mbod"YML..JMML  JMML  JMML.    .JMMmmmmMMM  `Mbmmd' `Moo9^Yo..JMML.   .JMML  JMML. `Mbmmd' .JMML.                                                                              
 """)
 # Game loop
 while True:
