@@ -1,24 +1,80 @@
-# @name: Cawdrey
+# @name: Memora
 # @author: kitsuiwebster
 
 import random
 import json
 from colorama import init, Fore
 
-init()  # initialize the colorama
+init() 
+print(Fore.YELLOW + "Welcome to the Centium Learner !" + Fore.RESET)
 
-# Load the JSON data
-with open("centium.json", "r") as file:
-    data = json.load(file)
+# Thhis is the Goodbye message
+def print_goodbye_message():
+    print("""
+     _______  _______  _______  ______   _______  __   __  _______ 
+    |       ||       ||       ||      | |  _    ||  | |  ||       |
+    |    ___||   _   ||   _   ||  _    || |_|   ||  |_|  ||    ___|
+    |   | __ |  | |  ||  | |  || | |   ||       ||       ||   |___ 
+    |   ||  ||  |_|  ||  |_|  || |_|   ||  _   | |_     _||    ___|
+    |   |_| ||       ||       ||       || |_|   |  |   |  |   |___ 
+    |_______||_______||_______||______| |_______|  |___|  |_______|
+    """)
+    print(Fore.YELLOW + "And see you soon :D")
 
-# Insert the JSON data into word_map
-word_map = data
 
 
-score = 0  # Initialize the score
-best_score = 0  # Initialize the best score
-streak = 0  # Initialize the streak count
+# This is the menu
+def choose_game_mode():
+    user_choice = input("Please choose between 1 (Centium), 2 (Millenium) or 3 (Quit): ")
 
+    if user_choice == '1':
+        with open("centium.json", "r") as file:
+            data = json.load(file)
+        word_map = data
+        print("\nYou chose Centium:\n")
+        print(""" 
+
+         d888    .d8888b.   .d8888b.  
+        d8888   d88P  Y88b d88P  Y88b 
+          888   888    888 888    888 
+          888   888    888 888    888 
+          888   888    888 888    888 
+          888   888    888 888    888 
+          888   Y88b  d88P Y88b  d88P 
+        8888888  "Y8888P"   "Y8888P"  
+
+        """)
+        print(Fore.YELLOW + "Let's start!" + Fore.RESET)
+
+    elif user_choice == '2':
+        with open("millenium.json", "r") as file:
+            data = json.load(file)
+        word_map = data
+        print("\nYou chose Millenium:\n")
+        print(""" 
+
+         d888    .d8888b.   .d8888b.   .d8888b.  
+        d8888   d88P  Y88b d88P  Y88b d88P  Y88b 
+          888   888    888 888    888 888    888 
+          888   888    888 888    888 888    888 
+          888   888    888 888    888 888    888 
+          888   888    888 888    888 888    888 
+          888   Y88b  d88P Y88b  d88P Y88b  d88P 
+        8888888  "Y8888P"   "Y8888P"   "Y8888P"
+
+        """)
+        print(Fore.YELLOW + "Let's start!" + Fore.RESET)
+
+    elif user_choice == '3':
+        print_goodbye_message()
+        exit(0)
+    else:
+        print("Invalid choice! Please choose either 1 (Centium), 2 (Millenium) or 3 (Quit).")
+        return choose_game_mode()  
+    return word_map
+
+
+# These are the congrats messages
 streak_of_10 = "CONGRATULATIONS ON HAVING 10 CORRECT ANSWERS IN A ROW, LET'S GOOOO!"
 streak_of_50 = "CONGRATULATIONS ON HAVING 50 CORRECT ANSWERS IN A ROW, LET'S GOOOO!"
 streak_of_100 = """CONGRATULATIONS, OH MASTER OF KNOWLEDGE AND WISDOM, FOR YOUR MAGNIFICENT FEAT OF ACING 100 QUESTIONS IN A ROW! YOUR BRAIN IS CLEARLY WIRED FOR GENIUS, YOUR NEURONS FIRED WITH PRECISION, AND YOUR INTELLECT SHINES BRIGHTER THAN A THOUSAND SUNS!
@@ -39,35 +95,23 @@ CHEERS TO YOU, THE SULTAN OF SMARTS, THE RULER OF RIGHT ANSWERS! THIS IS YOUR DA
 streak_of_150 = "CONGRATULATIONS ON HAVING 150 CORRECT ANSWERS IN A ROW, LET'S GOOOO!"
 streak_of_200 = "CONGRATS !!! YOU GOT 200 CORRECT ANSWERS IN A ROW, AAAAAAIGHT, YOU ROOOOOOCK!"
 
-print(""" 
 
- d888    .d8888b.   .d8888b.  
-d8888   d88P  Y88b d88P  Y88b 
-  888   888    888 888    888 
-  888   888    888 888    888 
-  888   888    888 888    888 
-  888   888    888 888    888 
-  888   Y88b  d88P Y88b  d88P 
-8888888  "Y8888P"   "Y8888P"  
+word_map = choose_game_mode()  
+score = 0  
+best_score = 0  
+streak = 0  
 
-""")
-
-print(Fore.YELLOW + "Welcome to the Centium Learner !" + Fore.RESET)
-# Game loop
+# This is the game loop
 while True:
-    # Choose a random number.
     num = random.choice(list(word_map.keys()))
     print(f"The number is: {num}")
     
-    # Ask the user to enter the corresponding word.
     user_word = input("Enter the corresponding word: ").lower()
     
-    # Check if the word is correct.
     if user_word == word_map[num]:
-        score += 1  # Increase the score
-        streak += 1  # Increase the streak
+        score += 1 
+        streak += 1 
         print(Fore.GREEN + "Correct! Let's go to the next round." + Fore.RESET)
-        # Print messages when user hits specific streak milestones
         if streak == 10:
             for _ in range(10):
                 print(Fore.GREEN + f"{streak_of_10}" + Fore.RESET)
@@ -81,30 +125,24 @@ while True:
             for _ in range(1000):
                 print(Fore.GREEN + f"{streak_of_200}" + Fore.RESET)
     else:
-        print(Fore.RED + f"Failed! the correct answer was {word_map[num]}. Game over!" + Fore.RESET)
+        print(Fore.RED + f"Failed! The correct answer was {word_map[num]}. Game over!" + Fore.RESET)
         print(Fore.YELLOW + f"Your score is: {score}" + Fore.RESET)
         
-        # Update the best score if the current score is higher.
         if score > best_score:
             best_score = score
 
-        streak = 0  # Reset the streak
-        
-        print("Press 'Enter' to retry or 'q' to quit.")
+        streak = 0 
+        print(Fore.YELLOW + f"Your best score in this session is: {best_score}" + Fore.RESET)
+        print("Press 'Enter' to retry, '1' to return to menu or '2' to quit.")
         retry = input().lower()
-        if retry == "q":
-            print(Fore.YELLOW + f"Your best score in this session is: {best_score}" + Fore.RESET)
-            print("""
- _______  _______  _______  ______   _______  __   __  _______ 
-|       ||       ||       ||      | |  _    ||  | |  ||       |
-|    ___||   _   ||   _   ||  _    || |_|   ||  |_|  ||    ___|
-|   | __ |  | |  ||  | |  || | |   ||       ||       ||   |___ 
-|   ||  ||  |_|  ||  |_|  || |_|   ||  _   | |_     _||    ___|
-|   |_| ||       ||       ||       || |_|   |  |   |  |   |___ 
-|_______||_______||_______||______| |_______|  |___|  |_______|
-""")
-            print(Fore.YELLOW + "And cy@ soon :D")
+        if retry == "2":
+            print_goodbye_message()
             break
+        elif retry == '1':
+            word_map = choose_game_mode()
+            score = 0  
+            streak = 0 
+            best_score = 0  
         else:
-            score = 0  # Reset the score
-
+            score = 0  
+            streak = 0 
