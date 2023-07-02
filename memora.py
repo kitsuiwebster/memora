@@ -6,7 +6,18 @@ import json
 from colorama import init, Fore
 
 init() 
-print(Fore.YELLOW + "Welcome to the Centium Learner !" + Fore.RESET)
+
+# This is the Welcome message
+print(Fore.YELLOW + """
+              
+              Welcome to""")
+print("""
+ __  __  ___  __  __   ___   ___    _   
+|  \/  || __||  \/  | / _ \ | _ \  /_\    
+| |\/| || _| | |\/| || (_) ||   / / _ \   
+|_|  |_||___||_|  |_| \___/ |_|_\/_/ \_\  
+
+""" + Fore.RESET)
 
 # Thhis is the Goodbye message
 def print_goodbye_message():
@@ -25,7 +36,7 @@ def print_goodbye_message():
 
 # This is the menu
 def choose_game_mode():
-    user_choice = input("Please choose between 1 (Centium), 2 (Millenium) or 3 (Quit): ")
+    user_choice = input("Please choose between 1 (Centium), 2 (Millenium) or 3 (Quit):")
 
     if user_choice == '1':
         with open("centium.json", "r") as file:
@@ -33,7 +44,6 @@ def choose_game_mode():
         word_map = data
         print("\nYou chose Centium:\n")
         print(""" 
-
          d888    .d8888b.   .d8888b.  
         d8888   d88P  Y88b d88P  Y88b 
           888   888    888 888    888 
@@ -42,7 +52,6 @@ def choose_game_mode():
           888   888    888 888    888 
           888   Y88b  d88P Y88b  d88P 
         8888888  "Y8888P"   "Y8888P"  
-
         """)
         print(Fore.YELLOW + "Let's start!" + Fore.RESET)
 
@@ -52,7 +61,6 @@ def choose_game_mode():
         word_map = data
         print("\nYou chose Millenium:\n")
         print(""" 
-
          d888    .d8888b.   .d8888b.   .d8888b.  
         d8888   d88P  Y88b d88P  Y88b d88P  Y88b 
           888   888    888 888    888 888    888 
@@ -61,7 +69,6 @@ def choose_game_mode():
           888   888    888 888    888 888    888 
           888   Y88b  d88P Y88b  d88P Y88b  d88P 
         8888888  "Y8888P"   "Y8888P"   "Y8888P"
-
         """)
         print(Fore.YELLOW + "Let's start!" + Fore.RESET)
 
@@ -69,7 +76,7 @@ def choose_game_mode():
         print_goodbye_message()
         exit(0)
     else:
-        print("Invalid choice! Please choose either 1 (Centium), 2 (Millenium) or 3 (Quit).")
+        print(Fore.RED + "Invalid choice!" + Fore.RESET)
         return choose_game_mode()  
     return word_map
 
@@ -135,17 +142,31 @@ while True:
 
         streak = 0 
         print(Fore.YELLOW + f"Your best score in this session is: {best_score}" + Fore.RESET)
-        print("Press 'Enter' to retry or choose between 1 (Menu) or 2 (Quit):")
+        print("Please choose between 1 (Continue playing), 2 (Menu) or 3 (Quit):")
         retry = input().lower()
-        if retry == "2":
+        if retry == "1":
+            print(Fore.YELLOW + "The game continues!" + Fore.RESET)
+        elif retry == "3":
             print_goodbye_message()
             break
-        elif retry == '1':
+        elif retry == '2':
             word_map = choose_game_mode()
             score = 0  
             streak = 0 
             best_score = 0  
         else:
-            #print("Invalid choice! Please choose either 1 (Menu) or 2 (Quit).")
-            score = 0  
-            streak = 0 
+            while retry not in ['1', '2', '3']:
+                print(Fore.RED + "Invalid choice!" + Fore.RESET)
+                print("Please choose between 1 (Continue playing), 2 (Menu) or 3 (Quit):")
+                retry = input().lower()
+    
+                if retry == "3":
+                    print("Continuing the game...")
+                elif retry == "2":
+                    print_goodbye_message()
+                    break
+                elif retry == '1':
+                    word_map = choose_game_mode()
+                    score = 0  
+                    streak = 0 
+                    best_score = 0
