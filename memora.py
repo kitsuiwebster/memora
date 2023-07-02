@@ -160,13 +160,12 @@ while True:
                 print(Fore.RED + "Invalid choice!" + Fore.RESET)
                 print("Please choose between 1 (Continue playing), 2 (Menu) or 3 (Quit):")
                 retry = input().lower()
-    
-                if retry == "3":
-                    print("Continuing the game...")
-                elif retry == "2":
+                if retry == "1":
+                    print(Fore.YELLOW + "The game continues!" + Fore.RESET)
+                elif retry == "3":
                     print_goodbye_message()
                     break
-                elif retry == '1':
+                elif retry == '2':
                     word_map = choose_game_mode()
                     score = 0  
                     streak = 0 
