@@ -42,7 +42,7 @@ def choose_game_mode():
         with open("centium.json", "r") as file:
             data = json.load(file)
         word_map = data
-        print("\nYou chose Centium:\n")
+        print(Fore.YELLOW + "\nYou chose Centium:\n")
         print(""" 
          d888    .d8888b.   .d8888b.  
         d8888   d88P  Y88b d88P  Y88b 
@@ -53,13 +53,13 @@ def choose_game_mode():
           888   Y88b  d88P Y88b  d88P 
         8888888  "Y8888P"   "Y8888P"  
         """)
-        print(Fore.YELLOW + "Let's start!" + Fore.RESET)
+        print("Let's start!" + Fore.RESET)
 
     elif user_choice == '2':
         with open("millenium.json", "r") as file:
             data = json.load(file)
         word_map = data
-        print("\nYou chose Millenium:\n")
+        print(Fore.YELLOW + "\nYou chose Millenium:\n")
         print(""" 
          d888    .d8888b.   .d8888b.   .d8888b.  
         d8888   d88P  Y88b d88P  Y88b d88P  Y88b 
@@ -70,7 +70,7 @@ def choose_game_mode():
           888   Y88b  d88P Y88b  d88P Y88b  d88P 
         8888888  "Y8888P"   "Y8888P"   "Y8888P"
         """)
-        print(Fore.YELLOW + "Let's start!" + Fore.RESET)
+        print("Let's start!" + Fore.RESET)
 
     elif user_choice == '3':
         print_goodbye_message()
