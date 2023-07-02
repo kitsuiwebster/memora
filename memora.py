@@ -133,7 +133,7 @@ while True:
 
         streak = 0 
         print(Fore.YELLOW + f"Your best score in this session is: {best_score}" + Fore.RESET)
-        print("Press 'Enter' to retry, '1' to return to menu or '2' to quit.")
+        print("Please choose between 1 (Menu) or (Quit): ")
         retry = input().lower()
         if retry == "2":
             print_goodbye_message()
