@@ -1,4 +1,1 @@
 # Centium Learner
-
-## Using guide
-
