@@ -119,8 +119,10 @@ while True:
             for _ in range(10):
                 print(Fore.GREEN + f"{streak_of_50}" + Fore.RESET)
         elif streak == 100:
-            for _ in range(10):
                 print(Fore.GREEN + f"{streak_of_100}" + Fore.RESET)
+        elif streak == 150:
+            for _ in range(10):
+                print(Fore.GREEN + f"{streak_of_150}" + Fore.RESET)
         elif streak == 200:
             for _ in range(1000):
                 print(Fore.GREEN + f"{streak_of_200}" + Fore.RESET)
@@ -133,7 +135,7 @@ while True:
 
         streak = 0 
         print(Fore.YELLOW + f"Your best score in this session is: {best_score}" + Fore.RESET)
-        print("Please choose between 1 (Menu) or (Quit): ")
+        print("Press 'Enter' to retry or choose between 1 (Menu) or 2 (Quit):")
         retry = input().lower()
         if retry == "2":
             print_goodbye_message()
@@ -144,5 +146,6 @@ while True:
             streak = 0 
             best_score = 0  
         else:
+            #print("Invalid choice! Please choose either 1 (Menu) or 2 (Quit).")
             score = 0  
             streak = 0 
