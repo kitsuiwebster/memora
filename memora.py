@@ -36,6 +36,7 @@ def print_goodbye_message():
 
 # This is the menu
 def choose_game_mode():
+    print(Fore.YELLOW + "******MENU*****MENU*****MENU*****MENU*****MENU*****MENU******" + Fore.RESET)
     user_choice = input("Please choose between 1 (Centium), 2 (Millenium) or 3 (Quit):")
 
     if user_choice == '1':
