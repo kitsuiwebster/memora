@@ -19,7 +19,7 @@ print("""
 
 """ + Fore.RESET)
 
-# Thhis is the Goodbye message
+# This is the Goodbye message
 def print_goodbye_message():
     print("""
      _______  _______  _______  ______   _______  __   __  _______ 
@@ -39,47 +39,54 @@ def choose_game_mode():
     print(Fore.YELLOW + "******MENU*****MENU*****MENU*****MENU*****MENU*****MENU******" + Fore.RESET)
     user_choice = input("Please choose between 1 (Centium), 2 (Millenium) or 3 (Quit):")
 
-    if user_choice == '1':
-        with open("centium.json", "r") as file:
-            data = json.load(file)
-        word_map = data
-        print(Fore.YELLOW + "\nYou chose Centium:\n")
-        print(""" 
-         d888    .d8888b.   .d8888b.  
-        d8888   d88P  Y88b d88P  Y88b 
-          888   888    888 888    888 
-          888   888    888 888    888 
-          888   888    888 888    888 
-          888   888    888 888    888 
-          888   Y88b  d88P Y88b  d88P 
-        8888888  "Y8888P"   "Y8888P"  
-        """)
-        print("Let's start!" + Fore.RESET)
+    try:
+        if user_choice == '1':
+            with open("centium.json", "r") as file:
+                data = json.load(file)
+            word_map = data
+            print(Fore.YELLOW + "\nYou chose Centium:\n")
+            print(""" 
+             d888    .d8888b.   .d8888b.  
+            d8888   d88P  Y88b d88P  Y88b 
+              888   888    888 888    888 
+              888   888    888 888    888 
+              888   888    888 888    888 
+              888   888    888 888    888 
+              888   Y88b  d88P Y88b  d88P 
+            8888888  "Y8888P"   "Y8888P"  
+            """)
+            print("Let's start!" + Fore.RESET)
 
-    elif user_choice == '2':
-        with open("millenium.json", "r") as file:
-            data = json.load(file)
-        word_map = data
-        print(Fore.YELLOW + "\nYou chose Millenium:\n")
-        print(""" 
-         d888    .d8888b.   .d8888b.   .d8888b.  
-        d8888   d88P  Y88b d88P  Y88b d88P  Y88b 
-          888   888    888 888    888 888    888 
-          888   888    888 888    888 888    888 
-          888   888    888 888    888 888    888 
-          888   888    888 888    888 888    888 
-          888   Y88b  d88P Y88b  d88P Y88b  d88P 
-        8888888  "Y8888P"   "Y8888P"   "Y8888P"
-        """)
-        print("Let's start!" + Fore.RESET)
+        elif user_choice == '2':
+            with open("millenium.json", "r") as file:
+                data = json.load(file)
+            word_map = data
+            print(Fore.YELLOW + "\nYou chose Millenium:\n")
+            print(""" 
+             d888    .d8888b.   .d8888b.   .d8888b.  
+            d8888   d88P  Y88b d88P  Y88b d88P  Y88b 
+              888   888    888 888    888 888    888 
+              888   888    888 888    888 888    888 
+              888   888    888 888    888 888    888 
+              888   888    888 888    888 888    888 
+              888   Y88b  d88P Y88b  d88P Y88b  d88P 
+            8888888  "Y8888P"   "Y8888P"   "Y8888P"
+            """)
+            print("Let's start!" + Fore.RESET)
 
-    elif user_choice == '3':
-        print_goodbye_message()
-        exit(0)
-    else:
-        print(Fore.RED + "Invalid choice!" + Fore.RESET)
-        return choose_game_mode()  
+        elif user_choice == '3':
+            print_goodbye_message()
+            exit(0)
+        else:
+            print(Fore.RED + "Invalid choice!" + Fore.RESET)
+            return choose_game_mode()
+
+    except FileNotFoundError:
+        print(Fore.RED + "Oops! The required .json file is missing. Please add the file and try again." + Fore.RESET)
+        return choose_game_mode() # This will loop back to the menu if the file is not found.
+
     return word_map
+
 
 
 # These are the congrats messages
