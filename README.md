@@ -14,6 +14,10 @@ Memora consists of a main Python file and two JSON files: centium.json and mille
 
 `cd memora`
 
+### Dependency
+
+`pip install colorama`
+
 ### Setting up your Centium/Millenium
 
 Open the centium.json and millenium.json files. You will see a list of keys (numbers) with blank values. Fill in the values with the elements of your Centium and Millenium.
@@ -42,11 +46,5 @@ e.g.
 ### Play Memora
 
 From the menu, to start training your Centium, press '1' and hit 'Enter'. The game will randomly pick a number from centium.json and ask you to input the corresponding element. If you want to train your Millenium, press '2' and hit 'Enter'. Similar to Centium training, the game will select a number from millenium.json and ask for the corresponding element. In case of a wrong answer during training, the menu will reappear, allowing you to choose between training again or quitting the game.
-
-## Dependencies
-
-### Install Colorama
-
-`pip install colorama`
 
 ## Enjoy training 😁
