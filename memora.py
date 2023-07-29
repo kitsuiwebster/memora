@@ -83,7 +83,7 @@ def choose_game_mode():
 
     except FileNotFoundError:
         print(Fore.RED + "Oops! The required .json file is missing. Please add the file and try again." + Fore.RESET)
-        return choose_game_mode() # This will loop back to the menu if the file is not found.
+        return choose_game_mode() 
 
     return word_map
 
