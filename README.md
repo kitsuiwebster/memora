@@ -97,7 +97,7 @@ Memora se compose d'un fichier Python principal et de deux fichiers JSON : centi
 
 ### Python
 
-Ensure you have Python 3.6 or higher installed. You can download Python from the official site: [Download Python](https://www.python.org/downloads/)
+Assurez-vous d'avoir installé Python 3.6 ou une version ultérieure. Vous pouvez télécharger Python depuis le site officiel : [Télécharger Python](https://www.python.org/downloads/)
 
 ### Pip
 
