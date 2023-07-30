@@ -55,7 +55,7 @@ From the main menu, to start training your Centium, press '1' and hit 'Enter'. T
 
 ## Présentation
 
-Memora est un jeu en ligne de commande simple et attrayant conçu pour vous aider à entraîner et tester votre mémoire de votre 'Centium' et 'Millenium'. Dans ce jeu, un nombre vous sera présenté, et votre tâche consiste à entrer correctement l'élément qui correspond à ce nombre. 
+Memora est un jeu en ligne de commande simple et attrayant conçu pour vous aider à entraîner et tester votre mémoire de votre 'Centium' et 'Millenium'. Dans ce jeu, un nombre vous sera présenté, et votre tâche consiste à entrer correctement l'élément qui correspond à ce nombre.
 
 Memora se compose d'un fichier Python principal et de deux fichiers JSON : centium.json et millenium.json. Ces fichiers stockent les éléments de votre Centium et Millenium respectivement. Les clés dans ces fichiers JSON sont des nombres allant de 00 à 99 dans centium.json et de 000 à 999 dans millenium.json. Les valeurs sont par défaut vides, vous devrez les remplir avec les éléments de votre Centium et Millenium.
 
