@@ -8,6 +8,34 @@ Memora is a simple and engaging command-line game designed to help you train and
 
 Memora consists of a main Python file and two JSON files: centium.json and millenium.json. These files store the elements of your Centium and Millenium respectively. The keys in these JSON files are numbers ranging from 00 to 99 in centium.json and from 000 to 999 in millenium.json. The values are blank by default, you'll have to fill them in with the elements of your Centium and Millenium.
 
+## Prerequisites
+
+### Python
+
+Ensure you have Python 3.6 or higher installed. You can download Python from the official site: [Download Python](https://www.python.org/downloads/)
+
+### Pip
+
+Windows:
+
+`python get-pip.py`
+
+Debian/Ubuntu:
+
+`sudo apt install python3-pip`
+
+Fedora:
+
+`sudo dnf install python3-pip`
+
+CentOS:
+
+`sudo yum install python3-pip`
+
+Arch Linux:
+
+`sudo pacman -S python-pip`
+
 ## How to play
 
 ### Installation
@@ -43,7 +71,13 @@ e.g.
 
 ### Launch Memora
 
-`python memora.py` or `python3 memora.py`
+Windows:
+
+`python memora.py`
+
+Linux: 
+
+`python3 memora.py`
 
 ### Play Memora
 
@@ -58,6 +92,34 @@ From the main menu, to start training your Centium, press '1' and hit 'Enter'. T
 Memora est un jeu en ligne de commande simple et attrayant conçu pour vous aider à entraîner et tester votre mémoire de votre 'Centium' et 'Millenium'. Dans ce jeu, un nombre vous sera présenté, et votre tâche consiste à entrer correctement l'élément qui correspond à ce nombre.
 
 Memora se compose d'un fichier Python principal et de deux fichiers JSON : centium.json et millenium.json. Ces fichiers stockent les éléments de votre Centium et Millenium respectivement. Les clés dans ces fichiers JSON sont des nombres allant de 00 à 99 dans centium.json et de 000 à 999 dans millenium.json. Les valeurs sont par défaut vides, vous devrez les remplir avec les éléments de votre Centium et Millenium.
+
+## Prérequis
+
+### Python
+
+Ensure you have Python 3.6 or higher installed. You can download Python from the official site: [Download Python](https://www.python.org/downloads/)
+
+### Pip
+
+Windows:
+
+`python get-pip.py`
+
+Debian/Ubuntu:
+
+`sudo apt install python3-pip`
+
+Fedora:
+
+`sudo dnf install python3-pip`
+
+CentOS:
+
+`sudo yum install python3-pip`
+
+Arch Linux:
+
+`sudo pacman -S python-pip`
 
 ## Comment jouer
 
@@ -94,7 +156,13 @@ Par example:
 
 ### Lancer Memora
 
-`python memora.py` or `python3 memora.py`
+Windows:
+
+`python memora.py`
+
+Linux: 
+
+`python3 memora.py`
 
 ### Jouer à Memora
 
