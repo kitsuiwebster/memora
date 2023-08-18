@@ -55,11 +55,12 @@ def choose_game_mode():
 
     return word_map
 
+# Variables
 word_map = choose_game_mode()
 score = 0
 best_score = 0
 streak = 0
-current_score = 0  # New variable for current session's score 
+current_score = 0 
 
 # This is the game loop
 while True:
@@ -70,7 +71,7 @@ while True:
     
     if user_word == word_map[num]:
         score += 1 
-        current_score += 1  # Increase current session's score
+        current_score += 1 
         streak += 1 
         print(Fore.GREEN + "Correct! Next word." + Fore.RESET)
         if streak == 10:
@@ -91,11 +92,11 @@ while True:
         print(Fore.RED + f"Failed! The correct answer was {word_map[num]}. Game over!" + Fore.RESET)
         print(Fore.YELLOW + f"Your score for this session is: {current_score}" + Fore.RESET)
 
-        if current_score > best_score:  # Compare with current_score, not score
+        if current_score > best_score:  
             best_score = current_score
 
         streak = 0
-        current_score = 0  # Reset current_score, not score
+        current_score = 0  
         print(Fore.YELLOW + f"Your best score in this session is: {best_score}" + Fore.RESET)
         print("Please choose between 1 (Continue playing), 2 (Back to Menu) or 3 (Quit):")
         retry = input().lower()
