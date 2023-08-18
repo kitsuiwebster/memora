@@ -72,7 +72,7 @@ while True:
         score += 1 
         current_score += 1  # Increase current session's score
         streak += 1 
-        print(Fore.GREEN + "Correct! Let's go to the next round." + Fore.RESET)
+        print(Fore.GREEN + "Correct! Next word." + Fore.RESET)
         if streak == 10:
             for _ in range(10):
                 print(Fore.GREEN + f"{streak_of_10}" + Fore.RESET)
