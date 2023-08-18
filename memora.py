@@ -37,7 +37,7 @@ def print_goodbye_message():
 # This is the menu
 def choose_game_mode():
     print(Fore.YELLOW + "******MENU*****MENU*****MENU*****MENU*****MENU*****MENU******" + Fore.RESET)
-    user_choice = input("Please choose between 1 (Centium), 2 (Millenium) or 3 (Quit):")
+    user_choice = input("Please choose between 1 (Train your Centium), 2 (Train your Millenium) or 3 (Quit):")
 
     try:
         if user_choice == '1':
@@ -153,7 +153,7 @@ while True:
         streak = 0
         current_score = 0  # Reset current_score, not score
         print(Fore.YELLOW + f"Your best score in this session is: {best_score}" + Fore.RESET)
-        print("Please choose between 1 (Continue playing), 2 (Menu) or 3 (Quit):")
+        print("Please choose between 1 (Continue playing), 2 (Back to Menu) or 3 (Quit):")
         retry = input().lower()
         if retry == "1":
             print(Fore.YELLOW + "The game continues!" + Fore.RESET)
@@ -168,7 +168,7 @@ while True:
         else:
             while retry not in ['1', '2', '3']:
                 print(Fore.RED + "Invalid choice!" + Fore.RESET)
-                print("Please choose between 1 (Continue playing), 2 (Menu) or 3 (Quit):")
+                print("Please choose between 1 (Continue playing), 2 (Back to Menu) or 3 (Quit):")
                 retry = input().lower()
                 if retry == "1":
                     print(Fore.YELLOW + "The game continues!" + Fore.RESET)
