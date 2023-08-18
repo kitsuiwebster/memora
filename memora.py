@@ -111,10 +111,11 @@ streak_of_150 = "CONGRATULATIONS ON HAVING 150 CORRECT ANSWERS IN A ROW, LET'S G
 streak_of_200 = "CONGRATS !!! YOU GOT 200 CORRECT ANSWERS IN A ROW, AAAAAAIGHT, YOU ROOOOOOCK!"
 
 
-word_map = choose_game_mode()  
-score = 0  
-best_score = 0  
-streak = 0  
+word_map = choose_game_mode()
+score = 0
+best_score = 0
+streak = 0
+current_score = 0  # New variable for current session's score 
 
 # This is the game loop
 while True:
@@ -125,6 +126,7 @@ while True:
     
     if user_word == word_map[num]:
         score += 1 
+        current_score += 1  # Increase current session's score
         streak += 1 
         print(Fore.GREEN + "Correct! Let's go to the next round." + Fore.RESET)
         if streak == 10:
@@ -143,12 +145,13 @@ while True:
                 print(Fore.GREEN + f"{streak_of_200}" + Fore.RESET)
     else:
         print(Fore.RED + f"Failed! The correct answer was {word_map[num]}. Game over!" + Fore.RESET)
-        print(Fore.YELLOW + f"Your score is: {score}" + Fore.RESET)
-        
-        if score > best_score:
-            best_score = score
+        print(Fore.YELLOW + f"Your score for this session is: {current_score}" + Fore.RESET)
 
-        streak = 0 
+        if current_score > best_score:  # Compare with current_score, not score
+            best_score = current_score
+
+        streak = 0
+        current_score = 0  # Reset current_score, not score
         print(Fore.YELLOW + f"Your best score in this session is: {best_score}" + Fore.RESET)
         print("Please choose between 1 (Continue playing), 2 (Menu) or 3 (Quit):")
         retry = input().lower()
