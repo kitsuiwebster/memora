@@ -8,6 +8,10 @@ Memora is a simple and engaging command-line game designed to help you train and
 
 Memora consists of a main Python file and two JSON files: centium.json and millenium.json. These files store the elements of your Centium and Millenium respectively. The keys in these JSON files are numbers ranging from 00 to 99 in centium.json and from 000 to 999 in millenium.json. The values are blank by default, you'll have to fill them in with the elements of your Centium and Millenium.
 
+## Demo
+
+[Click here to view the video](https://gitlab.com/kitsuiwebster/memora/-/raw/assets/demo.mp4)
+
 ## Prerequisites
 
 ### Python
